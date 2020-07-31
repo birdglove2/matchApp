@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ngO-Ou-Nr2">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remaining: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-UT-Q0l">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Start in : 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-UT-Q0l">
                                         <rect key="frame" x="314" y="0.0" width="180" height="20.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="vav-fU-Xpb"/>
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-Ru-MCW">
-                                        <rect key="frame" x="8" y="30.5" width="792" height="322.5"/>
+                                        <rect key="frame" x="8" y="30.5" width="792" height="317.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DSc-nr-Q8S">
                                             <size key="itemSize" width="128" height="128"/>
@@ -82,9 +82,16 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-jh-8xw">
-                                        <rect key="frame" x="381" y="363" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-jh-8xw">
+                                        <rect key="frame" x="384" y="359" width="40" height="33.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gIJ-m7-WW4"/>
+                                            <constraint firstAttribute="height" constant="35" id="jV6-mv-zwu"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="memories" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -120,5 +127,6 @@
         <image name="back" width="158" height="224"/>
         <image name="background" width="736" height="414"/>
         <image name="card1" width="158" height="224"/>
+        <image name="memories" catalog="system" width="128" height="107"/>
     </resources>
 </document>

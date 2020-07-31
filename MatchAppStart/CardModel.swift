@@ -35,7 +35,7 @@ class CardModel {
             // remove random numbers to prevent duplicate cards
             numOfCards.remove(at: randomNumber)
             
-            print(numOfCards)
+           // print(numOfCards)
             count+=1
             
         }

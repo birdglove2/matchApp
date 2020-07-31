@@ -3,4 +3,270 @@
    uuid = "110C8F35-564B-4F65-83DA-338EE19F07F4"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77AF6D56-9737-4D63-8C67-C34CEA0E3C65"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MatchAppStart/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "loadgame()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDE72F12-5574-40EB-B224-CCF005CF1E7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MatchAppStart/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "run321Timer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FF71994-5FA0-4CD0-BC4F-BF623AAE1621"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MatchAppStart/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "timer321Fired()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MatchAppStart/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - e37a1fb7e4275924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.milliseconds.getter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - 67dcc3e316a28d10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.milliseconds.setter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - 7cdec6e2216adc23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.milliseconds.modify : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - 9b349ec3ecb3ab37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.milliseconds.modify : Swift.Optional&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - aab1c49c321f334"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MatchAppStart.ViewController"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1703">
+               </Location>
+               <Location
+                  uuid = "CC900E4C-2DD0-44DF-AFDE-793E936CBB3D - 4af20f5179c1ceb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MatchAppStart.ViewController&gt;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1654">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADBED996-4056-46F7-9634-51C51FC17620"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MatchAppStart/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - a1ad0fc3453bba23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.gameEnd.getter : Swift.Bool"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - 66a4b201e80f621f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.gameEnd.setter : Swift.Bool"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - b6521a5e3da602e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.gameEnd.modify : Swift.Bool"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - c6ba272058b4ce1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.gameEnd.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - aab1c49c321f334"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MatchAppStart.ViewController"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "842">
+               </Location>
+               <Location
+                  uuid = "ADBED996-4056-46F7-9634-51C51FC17620 - 4af20f5179c1ceb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MatchAppStart.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MatchAppStart.ViewController&gt;"
+                  moduleName = "MatchAppStart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/birddddddddd/Desktop/appXcode/MatchAppStart/MatchAppStart/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "799">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

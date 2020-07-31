@@ -10,111 +10,94 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-
-    
-    @IBOutlet weak var restartButton: UIButton!
-    var gameEnd = false
-    
     @IBOutlet weak var CollectionView: UICollectionView!
-    
-    
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
+    var gameEnd = false
     let model = CardModel()
     var cardsArray = [Card]()
     var firstFlippedCardIndexPath:IndexPath?
     var cardOne:Card?
     var cardTwo:Card?
     
-    var timer:Timer?
-    var milliseconds:Int = 3 * 1000
+    weak var timer:Timer?
+    var milliseconds:Int?
     
     var soundPlayer:SoundManager = SoundManager()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("viewDidLoad")
-        restartButton.addTarget(self, action: #selector(self.loadData), for: .touchUpInside)
-
-        // Load the data
-        self.loadData();
         
-    
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("viewWillAppear")
-     //   let myButton = UIButton()
-
-        // When user touch myButton, we're going to call loadData method
-      //  restartButton.addTarget(self, action: #selector(self.loadData), for: .touchUpInside)
-
+        // Set func for restartButton
+        restartButton.addTarget(self, action: #selector(self.restartGame), for: .touchUpInside)
+        
         // Load the data
-        //self.loadData();
-    }
-    @objc func loadData() {
-        // code to load data from network, and refresh the interface
-        if gameEnd {
-                   print("game end is true")
-                   restartButton.isHidden = false
-               }else {
-                    print("game end is false")
-                   restartButton.isHidden = true
-               }
-        loadeiei()
-        CollectionView.reloadData()
+        loadgame();
     }
     
-    func loadeiei() {
-        gameEnd = false
-        milliseconds = 2 * 1000
+    //MARK: - Loading game data
+    func loadgame() {
+        // Set everything to start
         cardsArray = [Card]()
+        firstFlippedCardIndexPath = nil
+        cardOne = nil
+        cardTwo = nil
         
-        soundPlayer.playSound(effect: .shuffle,0)
         //restartButton.isHidden = true
+        gameEnd = false
+        runTimer()
+       
+        soundPlayer.playSound(effect: .shuffle,0)
         cardsArray = model.getCards() // shuffle cards
      
-        print(cardsArray)
         
         // Set the view controller as the datasource and delegate of the collection view
         CollectionView.dataSource = self
         CollectionView.delegate = self
+    
+    }
+    
+    @objc func restartGame() {
+        loadgame()
+        CollectionView.reloadData()
+    }
+    
+    //MARK: - Timer Methods
+    
+    func runTimer() {
+        // Stop the already-running timer -> prevent timer bug
+        timer?.invalidate()
         
-        // Initialize the timer
+        // Reset time
+        timeLabel.textColor = UIColor.black
+        milliseconds = 10 * 1000
+        
+        // Run time again
         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: .common)
     }
     
-  /* override func viewDidAppear(_ animated: Bool) {
-        soundPlayer.playSound(effect: .shuffle,0.3)
-    }*/
-   
-    //MARK: - Timer Methods
     @objc func timerFired() {
         
         // Decrement the counter
-        milliseconds -= 1
+        milliseconds! -= 1
         
         // Update the counter
-        let seconds:Double = Double(milliseconds)/1000.0
+        let seconds:Double = Double(milliseconds!)/1000.0
         timeLabel.text = String(format: "Time remaining: %.2f", seconds)
         
-        // Stop if it reaches zero
-        if milliseconds == 0 {
+        // Stop if it reaches zero -> Game End
+        if milliseconds! == 0 {
             timeLabel.textColor = UIColor.red
             timer?.invalidate()
+            gameEnd = true
         }
         
-        // Check if the user has cleared all the pairs
+        // Check For Game End ?
         checkForGameEnd()
-        
-       /* if gameEnd {
-            restartButton.isHidden = false
-            restartButton.addTarget(self, action: "buttonClicked:", for: .touchUpInside)
-        }*/
-       
         
     }
     
@@ -123,7 +106,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Asks your data source object for the number of items in the specified section.
         
         return cardsArray.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -180,9 +162,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let eachCard = cardsArray[indexPath.row]
         let cardCell = cell as? CardCollectionViewCell
         cardCell?.configureCell(eachCard)
-        
-        
-        
     }
        
     
@@ -208,6 +187,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             // is it the last pair ??
             checkForGameEnd()
+            
         }else{
             soundPlayer.playSound(effect: .correct)
             
@@ -235,17 +215,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             showAlert(title: "Congratulations!", message: "You've won the game")
             timer?.invalidate()
             gameEnd = true
-            restartButton.isHidden = false
             
         }else{
             // check if there is any time left or not
             if milliseconds == 0 {
                 showAlert(title: "Time's up!", message: "Better luck next time")
                 gameEnd = true
-                restartButton.isHidden = false
-                
             }
         }
+        
+        if gameEnd { restartButton.isHidden = false }
         
     }
     
@@ -256,8 +235,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         alert.addAction(dismissAction)
         
         present(alert, animated: true)
-        
-        
+
     }
     
 }

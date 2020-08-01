@@ -14,12 +14,12 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
     
-    @IBOutlet weak var cardName: UILabel!
+   // @IBOutlet weak var cardName: UILabel!
     
     func configureCell(_ card: Card) {
         self.card = card
         frontImageView.image = UIImage(named: card.imageName)
-        cardName.text = card.imageName
+      //  cardName.text = card.imageName
         
         // Reset the state of the cell by checking flipped status
         

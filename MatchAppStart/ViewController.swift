@@ -15,7 +15,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var restartButton: UIButton!
     
     var gameEnd = true
-   // var gameEnd2 = true
     let model = CardModel()
     var cardsArray = [Card]()
     var firstFlippedCardIndexPath:IndexPath?
@@ -24,7 +23,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     weak var timer:Timer?
     var milliseconds:Int?
-  //  var ThreeTwoOneTimerCheck:Bool = true
     var runOnlyOnce = true
     
     var soundPlayer:SoundManager = SoundManager()
@@ -42,11 +40,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Set func for restartButton
         restartButton.addTarget(self, action: #selector(self.restartGame), for: .touchUpInside)
         
-        // Load the data
-      
+        // Load game data
         loadgame();
-        
-        
     }
     
     //MARK: - Loading game data
@@ -63,11 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cardOne = nil
         cardTwo = nil
         
-       // restartButton.isHidden = true
-      //  gameEnd = false
-      //  gameEnd2 = false
-        //runTimer()
-       
+        restartButton.isHidden = true
         soundPlayer.playSound(effect: .shuffle,0)
         cardsArray = model.getCards() // shuffle cards
     
@@ -85,20 +76,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //MARK: - Timer Methods
     func run321Timer() {
         gameEnd = true
-        print("run321Timer")
-      
         timer?.invalidate()
-        timeLabel.textColor = UIColor.blue
+        timeLabel.textColor = UIColor(red: 0/255.0, green: 139/255.0, blue: 2/255.0, alpha: 1)
         milliseconds = 3 * 1000
     
         self.timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(self.timer321Fired), userInfo: nil, repeats: true)
         RunLoop.main.add(self.timer!, forMode: .common)
-        
-        //ThreeTwoOneTimerCheck = false
     }
     
     @objc func timer321Fired() {
-        
         // Decrement the counter
         milliseconds! -= 1
         
@@ -107,7 +93,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         timeLabel.text = String(format: "Game Start in: %.2f", seconds)
     
         if milliseconds! == 0 {
+            
             timer?.invalidate()
+            timeLabel.text = String("START THE GAME !!")
             gameEnd = false
             runTimer()
         }
@@ -119,7 +107,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Reset time
         timeLabel.textColor = UIColor.black
-        milliseconds = 5 * 1000
+        milliseconds = 50 * 1000
         
         // Run time again
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -164,10 +152,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // 1. Get a cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
-      /*  // 2. TODO: Configure it
-        let eachCard = cardsArray[indexPath.row]
-        cell.configureCell(eachCard)
-      */
+        // 2. TODO: Configure it
+  /*      let eachCard = cardsArray[indexPath.row]
+        cell.configureCell(eachCard) */
+    
         
         // 3. Return it
         return cell
@@ -218,6 +206,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cardCell?.configureCell(eachCard)
     }
        
+    //MARK: - Game Logic
     
     func checkForMatched(_ secondFlippedCardIndexPath:IndexPath) {
         soundPlayer.playSound(effect: .flip,0)
@@ -282,6 +271,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    // MARK: - Show Alert
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let dismissAction = UIAlertAction(title: "ok", style: .default, handler: nil)
